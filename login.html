@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #login{background: white; width:250px; height:250px; position: relative; top:150px; left:500px; font-size: 30px;  }
+    #email,#password{border-bottom:1px solid black; height:25px; border-top: unset; border-left: unset; border-right: unset;  }
+    #signinbtn ,#loginbtn{ position: relative ; left :170px; top:10px; background-color: aqua; font-size: 20px; }
+    
+    </style>
+    
+</head>
+<body>
+    <div id="login"> 
+        <label for="email"> Email :</label>
+        <br/>
+        <input type="text" id="email"  size="30" placeholder="Email Address" >
+        <br/>
+        <label for="password"> Password :</label>
+        <br/>
+        <input type="password" id="password"  maxlength="8" size="30" placeholder="Password">
+        <br/>
+        
+            <button id="loginbtn" onClick="login()">login</button>
+        <button id="signinbtn" onClick="signin()">Sigin</button>
+    
+       
+    </div>
+        
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script>
+        var config = {
+        apiKey: "AIzaSyDSj-9majcv_G_MciMtLXtKN2iZVm88ONM",
+        authDomain: "practice-92595.firebaseapp.com",
+        databaseURL: "https://practice-92595.firebaseio.com",
+        projectId: "practice-92595",
+        storageBucket: "practice-92595.appspot.com",
+        messagingSenderId: "456792115799"
+        };
+    firebase.initializeApp(config);
+</script> 
+          
+        
+        
+    <script src="index.js"></script>
+    
+    
+    <script> 
+    //ar userName;
+        
+        
+    /*  const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const signinbtn=document.getElementById("signinbtn");
+        const loginbtn=document.getElementById("loginbtn");
+        const logoutbtn=document.getElementById("logoutbtn");
+        
+        signinbtn.addEventListener('click', e => {
+            const emailValue = email.value;
+            const passwordValue = password.value;
+            const auth = firebase.auth();
+            const promise = auth.createUserWithEmailAndPassword(emailValue, passwordValue);
+            promise.then(e => window.location.replace('colddrink.html'));
+            promise.catch(e => alert(e.message));
+          });
+    
+          loginbtn.addEventListener('click', e => {
+            const emailValue = email.value;
+            const passwordValue = password.value;
+            const auth = firebase.auth();
+            const promise = auth.signInWithEmailAndPassword(emailValue, passwordValue);
+            promise.then(e => window.location.replace('colddrink.html'));
+            promise.catch(e => alert(e.message));
+          });*/
+          </script> 
+   
+</body>
+</html> 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <title>Document</title>
+    <style>
+        
+        .container-fluid{padding:0px; max-width: 1400px;}
+        .bg1 {background-color:gray;}
+        .head {height :120px;}
+        .bg2 {background-color:rgb(124,214,254);}
+        .mid {height :450px;}
+        .icons1 { position: absolute; top:150px; left: 50px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons2 { position: absolute; top:150px; left: 235px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons3 { position: absolute; top:150px; left: 420px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons4 { position: absolute; top:150px; left: 605px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons5 { position: absolute; top:150px; left: 790px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        
+        .icons-row1 { position: absolute; top:350px; left: 50px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons-row2 { position: absolute; top:350px; left: 235px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons-row3 { position: absolute; top:350px; left: 420px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons-row4 { position: absolute; top:350px; left: 605px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .icons-row5 { position: absolute; top:350px; left: 790px; padding-left: 0px; padding-right: 0px; width:170px; height:200px;    }
+        .recipt { border: 1px solid black; height:540px; background-color: azure;}
+        .icon-text {text-align: center; color: black; font-size: 17px;}
+        th,td {padding: 7px;}
+        .t {text-align: center;}
+        #button { position: absolute; top:390px; left :40px; display: inline;}
+        #footer {width: 100%; height:662px; background-color: gray; }
+        #col {height :450px; padding: 0px; margin :0;}
+        
+        li {list-style-type: none; position: relative; right : 32px; font-size: 13px; padding: 0;margin:0;  }
+        td {padding-left: 5px; padding-right: 5px; margin: 0px; padding-top:10px; text-align: center;}
+        th {padding-left: 5px; padding-right: 5px; margin: 0px;}
+        #result {position:  relative; left: 70px; font-size: 20px;}
+        hr { display: block; margin-top: 0.5em; margin-bottom: 0.5em; margin-left: auto; margin-right: auto; border-style: inset; border-width: 1px;}
+
+ 
+    </style>
+        
+</head
+><body
+    
+        ><div id="main" class="container-fluid">
+        <div class="col-lg-12 bg1 head"></div>
+        <div class="col-lg-9 bg2 mid"></div>
+            
+        
+            <div class="col-lg-2 bg2 icons-row1">
+                <img src="250ml.jpg" width="100%"  height="70%" alt="2.5 ml" />
+                <p class="icon-text"><strong>250 ml <br/> <s>35</s> <b> 30 Rs</b>  </p>
+            </div>
+        
+            <div class="col-lg-2 bg2 icons-row2">
+                <img src="500 ml.jpg" width="100%"  height="70%" alt="500 ml" />
+                <p class="icon-text"><strong>500 ml <br/> <s>55</s> <b> 50 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons-row3">
+                <img src="1ltr.jpg" width="100%"  height="70%" alt="1 litre" />
+                <p class="icon-text"><strong>1 litre <br/> <s>75</s> <b> 70 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons-row4">
+                <img src="1.5ltr.jpg" width="100%"  height="70%" alt="1.5 litre" />
+                <p class="icon-text"><strong>1.5 litre <br/> <s>95</s> <b> 90 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons-row5">
+                <img src="2.25ltr.jpg" width="100%"  height="70%" alt="2.25 litre" onClick='buyProduct(slice,"slice")' />
+                <p class="icon-text"><strong>2.25 litre <br/> <s>125</s> <b> 120 Rs</b>  </p>
+            </div>
+        
+
+            
+
+            <div class="col-lg-2 bg2 icons1">
+                <img src="sooper.jpg" width="100%"  height="70%" alt="Sooper biscuit" id="sooper" onClick='buyProduct(sooper,"sooper"); ' />
+                <p class="icon-text"><strong>Sooper Biscuit <br/> <s>25</s> <b> 20 Rs</b>  </p>
+            </div>
+        
+            <div class="col-lg-2 bg2 icons2">
+                <img src="lays100.jpg" width="100%"  height="70%" alt="lays" id="lays" onClick='buyProduct(lays,"lays")' />
+                <p class="icon-text"><strong>lays Chips <br/> <s>55</s> <b> 50 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons3">
+                <img id="slice" src="slice.jpeg" width="100%"  height="70%" alt=slice onClick='buyProduct(slice,"slice")';/>
+                <p class="icon-text"><strong>Slice Juice <br/> <s>25</s> <b> 20 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons4">
+                <img  id="dairymilk" src="dairymilk.jpg" width="100%"  height="70%" alt="Dairy Milk" onClick='buyProduct(dairymilk,"dairymilk")' />
+                <p class="icon-text"><strong>Dairy Milk Choclate <br/> <s>105</s> <b> 100 Rs</b>  </p>
+            </div>
+
+            <div class="col-lg-2 bg2 icons5">
+                <img src="cornetto.jpg" width="100%"  height="70%" alt="cornetto" onClick='buyProduct(cornetto,"cornetto");  '  id="cornetto" />
+                <p class="icon-text"><strong>walls Cornetto <br/> <s>55</s> <b> 50 Rs</b>  </p>
+            </div>
+            
+            <div class="col-lg-3 recipt" id="col" >
+                
+                <table  cellpadding="0" cellspacing="0" >
+                        <thead>
+                                <tr>
+                                    <Th>Sno</Th>
+                                    <Th> Name</Th>
+                                    <Th>Quantity</Th>
+                                    <Th>Price</Th>
+                                    <Th>Total Amount</Th>
+                                </tr>
+                
+                        </thead>
+                            <tbody id="table_body">
+                
+                            </tbody>
+                
+                </table>
+                <hr>
+                
+                <p id="result"></p>
+                <button type="button" id="btn" onclick="totalAmount(); del();" class="btn btn-info">Generate Bill!</button>
+                <button class="btn btn-info" id="logoutbtn"onClick="logout()">LogOut</button>
+            </div>
+
+            <div class="container-fluid" id="footer" >
+
+            </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script>
+            var config = {
+            apiKey: "AIzaSyDSj-9majcv_G_MciMtLXtKN2iZVm88ONM",
+            authDomain: "practice-92595.firebaseapp.com",
+            databaseURL: "https://practice-92595.firebaseio.com",
+            projectId: "practice-92595",
+            storageBucket: "practice-92595.appspot.com",
+            messagingSenderId: "456792115799"
+            };
+        firebase.initializeApp(config);
+    
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="index.js"></script>    
+        <script src="main.js"></script>    
+        
+         
+         <script>
+                console.log(document.getElementById("main"));
+                
+                /*logoutbtn.addEventListener('click', () => {
+                    const promise =firebase.auth().signOut();
+                    //promise.then(e => window.location.replace('login.html'));
+                    //promise.catch(e => alert(e.message));
+                 
+                  });
+            */
+            </script>
+   
+
+</body>
+</html>
